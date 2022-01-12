@@ -1,0 +1,794 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#Pizza_id {
+  /* margin-left: -10%; */
+}
+
+/* サイドメニュー用のスタイル */
+.sidelist {
+  /* float: right; */
+  right: 0%;
+  border: solid #6b501d;
+  background-color: #e6ab53f3;
+  margin: 0px 0px 0px 0px;
+  /* margin: auto; */
+  /* z-index: "80"; */
+  z-index: 70;
+  /* top: 40%; */
+
+  /* left: 322px; */
+  position: absolute;
+}
+
+/* レビューモード時のサイドメニューのスタイル */
+.sidelist2 {
+  float: right;
+  /* right: 0%; */
+  border: solid #6b501d;
+  background-color: #e6ab53f3;
+  margin: 0px 0px 0px 0px;
+  /* border: solid #d8a23e; */
+  /* margin: 0px 10px 20px 0px; */
+  margin: auto;
+  width: 100px;
+  /* z-index: "80"; */
+  z-index: 70;
+  /* top: 40%; */
+
+  /* left: 322px; */
+  /* position: absolute; */
+}
+
+/* メニューバーの文字のハイライト */
+.marker {
+  background-color: #ece35bf3;
+}
+
+.marker_review {
+  margin-top: 20px;
+  background-color: #6be24df3;
+  /* color: white; */
+}
+/* オンカーソル時に枠を表示 */
+.marker:hover {
+  transition-duration: 0.4s;
+  border: solid #eec57af3;
+}
+
+#menubtn:hover {
+  transition-duration: 0.4s;
+  color: #f4ff22f3;
+  /* border: solid #eec57af3; */
+}
+/* help下の幅調整用 */
+.help_botton {
+  margin-bottom: 0%;
+}
+
+/*  */
+#createbtn {
+  margin-top: 0%;
+}
+
+/* 生地エリアのスタイル　inline-blockの左側 */
+.leftside {
+  /* float: right; */
+  display: "inline-block";
+  border: solid #d8a23e;
+  margin: 0px 0px 0px 0px;
+
+  /* zindex: 1000; */
+}
+
+/*??  */
+.dough_img_class {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
+}
+/* 生地表示用の関数コンポーネントのスタイル */
+.Doughfnc_id {
+  /* float: left; */
+  /* display: inline-block; */
+  position: relative;
+}
+
+/* 配置用のトッピングのスタイル */
+#move_topping {
+  border: solid #59b0e2;
+  border-radius: 10px;
+}
+
+/*トッピングリストのクラス  */
+.topping_list {
+  /* display: inline-block; */
+  background-color: white;
+  padding: 0px;
+  max-width: 700px;
+
+  /* margin: 10px 10%; */
+  /* margin-left: 0%; */
+  /* left: 0%; */
+  text-align: left;
+}
+/* トッピング選択部分ののコンポーネントのスタイル */
+.topping_img {
+  /* display: inline-block; */
+  background-color: white;
+  /* margin: 0px 0px 0px 0%; */
+
+  padding: 0%;
+  text-align: center;
+}
+/* 選択中のトッピングの情報のコンポーネント */
+.topping_info_obj {
+  text-align: center;
+}
+
+.topping_info_pop {
+  background-color: rgb(218, 113, 43);
+  border: solid #e2f567f3;
+  border-radius: 10px;
+}
+
+/* 編集パネルのスタイル */
+.edit_p {
+  color: white;
+  /* text-align: left; */
+  padding: 10px 0px 0px 20px;
+}
+
+/* 編集パネルの中身 */
+.edit_add_border {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.edit_add_border:hover {
+  transition-duration: 0.4s;
+  border: solid #67f5baf3;
+}
+
+/* 明細表のスタイル */
+.ing_detail {
+  /* display: inline-block; */
+  /* border: solid #3e9ad8; */
+  color: white;
+  text-align: left;
+  padding: 10px 0px 0px 20px;
+}
+/* 明細表の合計部分 */
+.ing_detail_sum {
+  padding: 10px 10px 10px 60px;
+  /* display: inline-block; */
+}
+/* 明細表のリスト部分 */
+.ing_detail_list {
+  padding: 0px 10px 0px 80px;
+  /* display: inline-block; */
+}
+
+/* サイドメニューの中のトッピングの種類のスタイル */
+.opt_menu {
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  /* position:center; */
+  /* float: left; */
+}
+
+/* トッピングの編集用パネルのスタイル */
+.buttomside {
+  margin: 10px 10px 20px 0px;
+  padding: 0px 0px 0px 0px;
+  /* text-align: left; */
+  /* border: solid #d8a23e; */
+}
+
+/* 反映されているか怪しい */
+.edit_p1 {
+  /* display: table-cel; */
+  margin: 0px 0px 0px 0px;
+  padding: 0px 20% 0px 0%;
+  background-color: #02462af3;
+  color: white;
+}
+
+.edit_p1 li {
+  display: inline-block;
+}
+
+/* レビュー用Canvasの上のDiv　　使ってないかも */
+.div_canv {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  /* float: left; */
+}
+/* 出来上がり図用のキャンバスのクラス１ */
+.review_canvas {
+  /* margin: 0px 0px 0px 0px; */
+  background-color: white;
+  padding: 0px 0px 0px 0px;
+
+  /* border: solid #d8a23e; */
+}
+
+/* 出来上がり図用のキャンバスのクラス２
+大きさを変更するためにこのクラスを追加する。
+*/
+.review_canvas2 {
+  transition-duration: 1s;
+  transform: scale(0.5, 0.5);
+  transform-origin: left top;
+  background-color: white;
+  /* margin: 0px 20px -90px 0px; */
+}
+
+/* 出来上がり図用キャンバスを閉じるときに適用するクラス */
+.review_canvas_close {
+  height: 0%;
+  width: 0%;
+}
+
+/* ピザのパッケージの裏側状態のスタイル */
+.package_reverse {
+  background-color: white;
+  /* opacity: 0.2; */
+  /* background: rgba(255,255,255,0.9); */
+}
+/* ピザのパッケージの裏側状態のスタイル２　裏返しでマークを透かした状態にする */
+.package_reverse2 {
+  background-color: rgb(231, 219, 219);
+  opacity: 1;
+  /* margin: 20px; */
+}
+
+/* transitionの設定１　事前に時間通り人のみ指定して後から当てないと回転と移動が同時にできない */
+.package_clsose_pre {
+  transition-duration: 1s;
+  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.9);
+  transform-origin: left;
+  /* background-color: white; */
+  /* margin: 0px 20px -90px 0px; */
+}
+
+/* 処理で後から当てるものこちらは回転の処理のみ */
+.package_close {
+  opacity: 1;
+  transform: scale(-1, 1);
+  /* transform: scale3d(1, 1, 1); */
+  background-color: white;
+  /* margin: 0px 20px -90px 0px; */
+}
+
+/* レビューモード時のサイドメニュー */
+.back_to_edit {
+  float: right;
+  /* transition-duration: 10s; */
+  /* transition: background-color 10s, border 5s, margin 5s;  */
+  /*アニメーションをcolorのプロパティのみ適用*/
+  /* transition-duration: 0.5s; */
+  /* top: 10%; */
+  /* margin: 10px 10px 10px 10px; */
+  /* animation-duration: 3s; */
+  /* animation-name: slidein; */
+  /* float: right; */
+  /* background: #d8a23e; */
+  /* border: solid #301d0b; */
+  /* transition-duration */
+}
+
+/* アコーディオンのアニメーション */
+@keyframes acord1 {
+  0% {
+    overflow: hidden;
+    opacity: 0;
+    /* height: 0px; */
+    margin-bottom: -50%;
+  }
+
+  /* 20% {
+    overflow: hidden;
+    opacity: 0.2;
+    height: 20px;
+  }
+
+  40% {
+    overflow: hidden;
+    opacity: 0.4;
+    height: 40px;
+  } */
+
+  60% {
+    overflow: hidden;
+    opacity: 0.6;
+    margin-bottom: -10%;
+    /* height: 60px; */
+  }
+
+  /* 80% {
+    overflow: hidden;
+    opacity: 0.8;
+    height: 80px;
+  } */
+
+  100% {
+    overflow: visible;
+    opacity: 1;
+    margin-bottom: 0%;
+
+    /* height: 20px; */
+  }
+}
+
+/* アコーディオンのアニメーション 閉じる動き*/
+@keyframes acord2 {
+  0% {
+    overflow: hidden;
+    opacity: 0;
+    /* height: 0px; */
+    /* margin-top: -20%; */
+    margin-bottom: -50%;
+  }
+
+  60% {
+    overflow: hidden;
+    opacity: 0.3;
+    /* margin-top: -10%; */
+    margin-bottom: -10%;
+    /* height: 60px; */
+  }
+
+  100% {
+    overflow: visible;
+    opacity: 1;
+    /* margin-top: -10%; */
+    margin-bottom: 0%;
+
+    /* height: 20px; */
+  }
+}
+
+/* フェードイン用アニメーション */
+@keyframes feed_in {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* フェードイン用アニメーション */
+@keyframes feed_in2 {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 初期表示用アニメーション */
+@keyframes feed_in_slide {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+    margin-top: -50%;
+  }
+
+  60% {
+    opacity: 0.2;
+    overflow: hidden;
+    margin-top: -20%;
+  }
+
+  100% {
+    opacity: 1;
+    overflow: visible;
+    margin-top: 0%;
+  }
+}
+
+/* ガイド用キャンバスのアニメーションとクラス */
+.canv_add {
+  animation: canv_ani 1s;
+}
+
+@keyframes canv_ani {
+  to {
+    /* transform: translateX(200px); */
+    background-color: #91a0e4;
+    border: solid #91a0e4;
+    opacity: 0.5;
+    z-index: 2000;
+  }
+}
+
+/* トッピングを配置する際のスタンプアニメーションとそのクラス */
+.stanp_add {
+  animation: stanp_ani 0.5s;
+}
+
+@keyframes stanp_ani {
+  to {
+    background-color: #91a0e4;
+    transform: scale(0.8, 0.8);
+  }
+}
+.stanp_add2 {
+  animation: stanp_ani 0.5s;
+}
+
+@keyframes stanp_ani2 {
+  to {
+    background-color: #91a0e4;
+    transform: scale(0.8, 0.8);
+  }
+}
+
+/* ？？？ */
+.ani_add {
+  animation: test_to_from 1s;
+}
+/* ？？？ */
+.tran_add {
+  transition-duration: 2s;
+  background-color: #8494da;
+}
+/* ？？ */
+@keyframes test_to_from {
+  to {
+    /* transform: translateX(200px); */
+    background-color: blue;
+  }
+}
+/* ？？ */
+@keyframes test {
+  0% {
+    /* background: #dddde0; */
+    /* padding-top: -50px; */
+    overflow: hidden;
+    opacity: 0.1;
+    /* visibility: hidden; */
+    height: 20px;
+    /* margin-top: -50%; */
+  }
+
+  50% {
+    /* padding-top: -20%; */
+    /* height: 60px; */
+    opacity: 0.5;
+    overflow: hidden;
+    height: 50px;
+    background: #5d6db3;
+    /* visibility: hidden; */
+    /* margin-top: -10%; */
+  }
+
+  100% {
+    padding-top: 0%;
+    /* height: 100px; */
+    /* background: #111c4e; */
+    /* visibility: visible; */
+
+    /* margin-top: 100px; */
+  }
+}
+/* ？？ */
+.trans_test3:hover {
+  transition-duration: 2s;
+  transition-property: background, margin;
+  /* transition: background-color 10s,  margin 5s; アニメーションをcolorのプロパティのみ適用 */
+  /* transition-duration: 0.5s; */
+
+  margin: 10px 10px 10px 10px;
+
+  background: #5d6db3;
+  border: solid #dfcbb8;
+}
+
+/* レビューモード時のサイドメニュー */
+.back_to_edit:hover {
+  /* transition-duration: 2s; */
+  /* transition-property: height; */
+
+  height: 200px;
+}
+
+/* 住所情報の入力機能のクラス */
+.input_order {
+  /* display: block; */
+  background-color: white;
+  /* animation: feed_in 0.8s; */
+  /* padding: 0px 0px 0px 0px; */
+  margin: 0px 10%;
+  max-width: 700px;
+  /* float: right; */
+  /* left: 0%; */
+}
+
+/* 入力フォームのフェードインアニメーション用のクラス */
+.input_add_animation {
+  animation: feed_in 1s;
+}
+
+.input_add_animation2 {
+  /* animation: stanp_ani 1s; */
+  animation: feed_in2 1s;
+  /* 同じアニメーションkeyframesが使用できないだけかもしれない */
+  /* animation: feed_in 1s; */
+}
+
+/* 入力しフォームのクラス */
+.form_class {
+  /* display: block; */
+  /* background-color: blue; */
+  /* margin-left: 0px; */
+  /* padding-left: 0px; */
+  left: 0px;
+  text-align: left;
+  max-width: 700px;
+  /* padding: 0; */
+}
+/* ？？ */
+.input_forms {
+  max-width: 700px;
+}
+
+/* 入力フォームのテキストボックス */
+.tbox {
+  padding: 5px 0px 0px 0px;
+  margin: 10px 0px 0px 10px;
+}
+/* 入力フォームのエラーメッセージのクラス */
+.error_msg {
+  margin-top: 0%;
+  margin-left: 15%;
+  margin-bottom: 0px;
+}
+
+/* 入力フォームのエラーメッセージの！！部分 */
+.text_alert {
+  background-color: #e95224f3;
+  color: white;
+  border: solid 2px red;
+  border-radius: 5px;
+}
+
+/* 入力情報確認画面のスタイル */
+.check_class {
+  background-color: rgb(247, 235, 235);
+  margin: 0px 10%;
+  border: solid #7872e6;
+  border-radius: 10px;
+  max-width: 700px;
+  /* animation: feed_in 0.8s; */
+  /* padding: */
+}
+/* 住所情報の入力画面のボタン */
+.check_buttons {
+  display: inline-block;
+  /* float: left; */
+  margin: 10px;
+}
+
+/* 生地の画像のID */
+#Dough_img2 {
+  z-index: -9;
+  position: "absolute";
+}
+
+.font_block {
+  color: rgba(90, 80, 80, 0.5);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* help画面 */
+.help_menu {
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  padding: 0px;
+  background-color: white;
+  position: fixed;
+  z-index: 1020;
+}
+
+/*ヘルプ画面の外側部分  */
+.help_menu2 {
+  background-color: rgba(90, 80, 80, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 101;
+}
+
+.help_img {
+  width: 70%;
+  height: 70%;
+  max-height: 400px;
+  max-width: 400px;
+  border: solid #beeedaf3;
+}
+/* help,生地選択画面の閉じるボタン */
+.close_btn {
+  transition-duration: 0.4s;
+  border: solid 5px #46b9dbf3;
+  margin: 5px 10px;
+}
+/* 閉じるボタンのオンカーソル時 */
+.close_btn:hover {
+  transition-duration: 0.4s;
+  background-color: #46b9dbf3;
+  color: white;
+}
+/* 生地選択画面の生地の画像 */
+.Dough_img {
+  /* borderの分のマージンが必要 */
+  margin: 10px;
+}
+
+.Dough_img:hover {
+  transition-duration: 0.4s;
+  border: solid 10px #46b9dbf3;
+  margin: 0px;
+}
+
+.msg_change {
+  /* margin:30px 20px; */
+}
+
+/* ヘルプ画面と生地選択画面の矢印 */
+.Img_select {
+  /* borderの分のマージンが必要 */
+  margin: 10px;
+}
+/* ヘルプ画面と生地選択画面の矢印のオンカーソル時 */
+.add_border_b:hover {
+  transition-duration: 0.4s;
+  border: solid 10px #46b9dbf3;
+  margin: 0px;
+}
+
+/* トッピングの画像のオンカーソル時 */
+.add_inner_border_b:hover {
+  transition-duration: 0.4s;
+  border: solid 5px #46b9dbf3;
+  /* 内側に枠線を作る */
+  box-sizing: border-box;
+}
+.add_inner_border_b {
+  margin: -5px;
+}
+#guide_canvas {
+  /* border: solid #219bcaf3; */
+}
+
+.on_topping {
+  transition-duration: 0.4s;
+  border: solid 5px #46b9dbf3;
+}
+
+.out_topping {
+  transition-duration: 0.4s;
+  border: solid 5px #c9451df3;
+}
+
+.guide_message {
+  background-color: #46b9dbf3;
+}
+
+.guide_message2 {
+  /* background-color: #46b9dbf3; */
+  color: #46b9dbf3;
+  animation: feed_in_slide_msg 1s;
+  opacity: 0;
+  font-size: 40px;
+}
+
+@keyframes feed_in_slide_msg {
+  0% {
+    opacity: 1;
+    overflow: hidden;
+    margin-top: -10%;
+  }
+
+  40% {
+    opacity: 0.7;
+    overflow: visible;
+    margin-top: -5%;
+  }
+
+  50% {
+    opacity: 0.9;
+    overflow: visible;
+    margin-top: %;
+  }
+
+  100% {
+    opacity: 0;
+    overflow: visible;
+    margin-top: 10%;
+  }
+}
+
+/* #review_wcanvas2:hover{
+
+background-color: white;
+} */
+
+/* ------------ */
+
+.test_border {
+  /* transition-duration: 10s; */
+  /* transition-property: border;  */
+  /*アニメーションをcolorのプロパティのみ適用*/
+  transition: border 10s; /*アニメーションをcolorのプロパティのみ適用*/
+
+  /* display: inline-block; */
+  /* border: solid #02462af3; */
+  /* margin: 0px 10px 20px 0px; */
+  /* padding: 0px 10px 20px 0px; */
+}
+
+/* for test css */
+.test_border_1 {
+  transition-duration: 0.5s;
+  border: solid #d8a23e;
+}
+.test_botom {
+  height: 200px;
+}
+
+.testindex {
+  z-index: 90;
+  position: absolute;
+  /* float: right; */
+}
+
+.not_moving {
+  /* width: "50"; */
+}
+
+.trans_test {
+  transition: background-color 3s, border 5s, margin 5s; /*アニメーションをcolorのプロパティのみ適用*/
+  /* transition-duration: 0.5s; */
+
+  margin: 1px 1px 1px 1px;
+
+  background: #d8a23e;
+  border: solid #301d0b;
+}
+
+.trans_test2 {
+  transition: background-color 3s, border 3s, margin 3s; /*アニメーションをcolorのプロパティのみ適用*/
+  /* transition-duration: 0.5s; */
+
+  margin: 10px 10px 10px 10px;
+
+  background: #b8b0a1;
+  border: solid #dfcbb8;
+}
+
+.test_ani {
+  animation: acord2 1s;
+}

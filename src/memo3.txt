@@ -1,0 +1,12 @@
+MacにHTTPが入らなかった原因
+
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+
+chown;権限変更
+chown　オプション　上書き、追加するユーザー名　変更するフォルダの場所
+
+
+ーR：指定ディレクトリの全てのオーナー
+$(whoami):現在のログインユーザー
+npm config get prefix：npmのデフォルト階層
+{}の中身:その配下のフォルダ
